@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #007bff; /* Blue background */
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            background: #0056b3; /* Darker blue for header */
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .row-tab {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .label-tab {
+            flex-basis: 30%;
+            padding-right: 10px;
+        }
+        .input-tab {
+            flex-basis: 70%;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Survey Form</h1>
+    </header> 
+    <section>
+        <div class="container">
+            <div id="description">
+                <p>Let us know how we can improve FreeCodeCamp</p>
+            </div>
+            <form id="survey-form">
+                <div class="row-tab">
+                    <div class="label-tab">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-tab">
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                </div>
+                <div class="row-tab">
+                    <div class="label-tab">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-tab">
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="row-tab">
+                    <div class="label-tab">
+                        <label for="age">Age</label>
+                    </div>
+                    <div class="input-tab">
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                </div>
+                <div class="row-tab">
+                    <div class="label-tab">
+                        <label for="role">Which option best describes your current role?</label>
+                    </div>
+                    <div class="input-tab">
+                        <select id="role" name="role" required>
+                            <option value="">Select an option</option>
+                            <option value="student">Student</option>
+                            <option value="fresher">Fresher</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row-tab">
+                    <div class="label-tab">
+                        <label>How likely is it that you would recommend FreeCodeCamp to a friend?</label>
+                    </div>
+                    <div class="input-tab">
+                        <input type="radio" name="suggest" value="definitely" required><label>Definitely</label>
+                        <input type="radio" name="suggest" value="maybe"><label>Maybe</label>
+                        <input type="radio" name="suggest" value="not sure"><label>Not sure</label>
+                    </div>
+                </div>
+                <div class="row-tab">
+                    <div class="label-tab">
+                        <label for="like">What do you like most in FreeCodeCamp?</label>
+                    </div>
+                    <div class="input-tab">
+                        <select id="like" name="like" required>
+                            <option value="">Select an option</option>
+                            <option value="option-1">Option 1</option>
+                            <option value="option-2">Option 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row-tab">
+                    <div class="label-tab">
+                        <label>Things that should be improved in the future:</label>
+                    </div>
+                    <div class="input-tab">
+                        <input type="radio" name="project" value="front-end" required><label>Front-end projects</label>
+                        <input type="radio" name="project" value="back-end"><label>Back-end projects</label>
+                        <input type="radio" name="project" value="data-visualization"><label>Data visualization</label>
+                    </div>
+                </div>
+                <div class="row-tab">
+                    <div class="input-tab">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
